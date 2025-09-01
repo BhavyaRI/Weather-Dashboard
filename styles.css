@@ -1,0 +1,175 @@
+body{
+    background-color: #e9f2fc;
+    font-family: Nunito, sans-serif;
+}
+.search-bar {
+  margin-top: 30px;
+  height: 40px;
+  width: 400px;
+  border-radius: 60px;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+  border: none;
+  display: flex;               
+  align-items: center;         
+  padding: 0 10px;             
+  gap: 10px;       
+  background-color: white;            
+}
+
+.search-bar img {
+  height: 24px; 
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  background-color:white
+}
+
+.btn{
+  height: 30px;
+  border-radius: 60px;
+  border: none;
+  width: 100px;
+  background-color: rgb(0, 89, 255);
+  color: white;
+}
+.search {
+  height: 30px;
+  width: 300px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.weather{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+.mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #333;
+}
+.upper h1{
+    margin-left: 20px;
+    font-size: 30px;
+    color: #333;
+}
+.upper h3{
+    margin-right: 20px;
+    font-size: 20px;
+    color: #333;
+}
+.city1{
+    display: flex;
+    border: none;
+    margin-left: 50px;
+    width: 900px;
+    border-radius: 10px ;
+    background-color: white;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgb(28, 95, 219);
+    color: white;
+    line-height: 0.8;
+
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon img{
+    width: 150px;
+    margin-bottom: 50px;
+}
+.city
+{
+    width: 600px;
+    margin-left: 10px;
+}
+.city h1,h2,h3,h4{
+    margin-left: 10px;
+    
+}
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+}
+
+.label img {
+  width: 20px;
+  height: 20px;
+}
+
+.value {
+  font-weight: bold;
+  color: #222;
+}
+
+.hourly-forecast {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    max-width: 1220px; 
+}
+
+.hourly-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    min-width: 100px; 
+}
+
+.hourly-card img {
+    width: 40px;
+    height: 40px;
+    margin: 5px 0;
+}

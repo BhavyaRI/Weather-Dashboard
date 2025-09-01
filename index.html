@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper">
+            <div>
+                <h1>Weather</h1>
+            </div>
+            <div>
+                <h3 id="time"></h3>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="search-bar">
+                <img src="src/icons8-search.svg" alt="">
+                <input type="text" class="search" placeholder="Enter username">
+                <button class="btn" id="searchbtn">Search</button>
+            </div>
+            <div class="weather">
+                <div class="city1">
+                    <div class="city">
+
+                        <h2>Mumbai</h2>
+                        <h4>Mumbai</h4>
+                        <h2>32</h2>
+                        <h4>sunny</h4>
+                    </div>
+                    <div class="icon">
+                        <img src="./src/partlyclouds.svg "alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Weather Details</h2>
+
+                    <div class="row">
+                        <div class="label">
+                            <img src="src/icons8-humidity-48.png">
+                            <span>Humidity</span>
+                        </div>
+                        <div class="value">65%</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="label">
+                            <img src="src/icons8-wind-48.png">
+                            <span>Wind</span>
+                        </div>
+                        <div class="value">8 mph</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="label">
+                            <img src="src/icons8-pressure-48.png">
+                            <span>Pressure</span>
+                        </div>
+                        <div class="value">1012 hPa</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="label">
+                            <img src="src/icons8-sunlight-48.png">
+                            <span>UV Index</span>
+                        </div>
+                        <div class="value">5</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hourly-forecast" id="hourlyForecast"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
