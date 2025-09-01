@@ -31,11 +31,16 @@ function wicon(conditionText) {
 // --- DATA FETCHING AND DISPLAY ---
 
 function getdata(city) {
-  const url = `/api/getWeather?city=${city}&type=current`;
+  const url = `/api/getweather?city=${encodeURIComponent(city)}&type=current`;
   fetch(url)
     .then((resp) => {
       if (!resp.ok) {
-        alert("City not found. Please try again.");
+        resp.json().then((j) => {
+          console.error("API error response:", resp.status, j);
+          alert(j?.error || "City not found. Please try again.");
+        }).catch(() => {
+          alert("City not found. Please try again.");
+        });
         throw Error("City not found");
       }
       return resp.json();
@@ -100,8 +105,11 @@ function displayData(data) {
 
 async function gethourlyupdates(city) {
   try {
-    // Call your own serverless function now
-    const res = await fetch(`/api/getWeather?city=${city}&type=forecast`);
+    const res = await fetch(`/api/getweather?city=${encodeURIComponent(city)}&type=forecast`);
+    if (!res.ok) {
+      console.error("Forecast endpoint returned", res.status);
+      return;
+    }
     const data = await res.json();
     const parent = document.getElementById("hourlyForecast");
 
@@ -155,6 +163,7 @@ function updateDate() {
 searchBtn.addEventListener("click", () => {
   if (cityInput.value) {
     getdata(cityInput.value);
+    gethourlyupdates(cityInput.value);
   } else {
     alert("Please enter a city name.");
   }
@@ -169,3 +178,4 @@ cityInput.addEventListener("keyup", (event) => {
 // --- INITIAL LOAD ---
 updateDate();
 getdata("Delhi,india");
+gethourlyupdates("Delhi,india");
