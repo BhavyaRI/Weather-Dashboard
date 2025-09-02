@@ -33,8 +33,3 @@ Weathrly is a web-based application that allows users to get up-to-date weather 
 *   **CSS:** For styling the application.
 *   **JavaScript:** For application logic and displaying data.
 *   **Node.js:** For handling API requests to the weather service.
-
-
-## License
-
-This project is not licensed. You can add a license file to the repository to let others know how they can use your code. Choose a license at [choosealicense.com](https://choosealicense.com/).
